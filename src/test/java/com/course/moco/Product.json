@@ -1,0 +1,264 @@
+[
+  {
+    "description": "查询商品池编号",
+    "request": {
+      "uri": "/api/product/getPageNum",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": [
+          {
+            "name": "酒类商品池",
+            "page_num": "3"
+          },
+          {
+            "name": "苹果手机",
+            "page_num": "20160505"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "查询池内商品编号",
+    "request": {
+      "uri": "/api/product/getSkuByPage",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "page_num": "20160505",
+        "pageNo": "1"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "pageCount": 1,
+          "skuIds": [
+            202567,
+            251308,
+            251310,
+            251321,
+            251326,
+            5677476,
+            7535498
+          ]
+        }
+      }
+    }
+  },
+  {
+    "description": "查询商品详情",
+    "request": {
+      "uri": "/api/product/getDetail",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "sku": "202567",
+        "queryExts": "isSelf"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "pageCount": 1,
+          "skuIds": [
+            202567,
+            251308,
+            251310,
+            251321,
+            251326,
+            5677476,
+            7535498
+          ]
+        }
+      }
+    }
+  },
+  {
+    "description": "查询商品图片",
+    "request": {
+      "uri": "/api/product/skuImage",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "sku": "202567"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": [
+          {
+            "id": 32266938,
+            "skuId": 3273327,
+            "path": "jfs/t14749/245/506469347/72873/617a5312/5a2f9356N3e0bc4e6.jpg",
+            "created": "2018-08-17 14:54:40",
+            "modified": "2018-08-17 14:54:40",
+            "yn": 1,
+            "isPrimary": 1,
+            "orderSort": 1,
+            "position": null,
+            "type": 0,
+            "features": null
+          },
+          {
+            "id": 32266939,
+            "skuId": 3273327,
+            "path": "jfs/t14509/275/510696381/249352/2d64dd5e/5a2f936bN30f51c0b.jpg",
+            "created": "2018-08-17 14:54:40",
+            "modified": "2018-08-17 14:54:40",
+            "yn": 1,
+            "isPrimary": 0,
+            "orderSort": 2,
+            "position": null,
+            "type": 0,
+            "features": null
+          },
+          {
+            "id": 32266940,
+            "skuId": 3273327,
+            "path": "jfs/t15799/278/416538704/120414/c6bc4aef/5a308bacNbb15a3d8.jpg",
+            "created": "2018-08-17 14:54:40",
+            "modified": "2018-08-17 14:54:40",
+            "yn": 1,
+            "isPrimary": 0,
+            "orderSort": 3,
+            "position": null,
+            "type": 0,
+            "features": null
+          },
+          {
+            "id": 32266941,
+            "skuId": 3273327,
+            "path": "jfs/t14620/346/518605081/344428/9874b3f5/5a2f9371Ncfa140a9.jpg",
+            "created": "2018-08-17 14:54:40",
+            "modified": "2018-08-17 14:54:40",
+            "yn": 1,
+            "isPrimary": 0,
+            "orderSort": 4,
+            "position": null,
+            "type": 0,
+            "features": null
+          },
+          {
+            "id": 32266945,
+            "skuId": 3273327,
+            "path": "jfs/t16009/103/381852404/288982/293ec0eb/5a2f9395N6ed48806.jpg",
+            "created": "2018-08-17 14:54:40",
+            "modified": "2018-08-17 14:54:40",
+            "yn": 1,
+            "isPrimary": 0,
+            "orderSort": 8,
+            "position": null,
+            "type": 0,
+            "features": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "查询商品上架状态",
+    "request": {
+      "uri": "/api/product/skuState",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "sku": "202567"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": [
+          {
+            "state": 1,
+            "sku": 962547
+          },
+          {
+            "state": 1,
+            "sku": 3273327
+          },
+          {
+            "state": 1,
+            "sku": 1833249
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "验证商品可售性",
+    "request": {
+      "uri": "/api/product/check",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "sku": "202567",
+        "queryExts": "isSelf"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": [
+          {
+            "is7ToReturn": 1,
+            "isCanVAT": 1,
+            "name": "荣事达（Royalstar）养生壶煎药壶2L玻璃电水壶304不锈钢发热盘YSH20K",
+            "saleState": 0,
+            "skuId": 1032440,
+            "noReasonToReturn": 3,
+            "thwa": 0
+          },
+          {
+            "is7ToReturn": 1,
+            "thwa": 1,
+            "isCanVAT": 1,
+            "name": "荣事达（Royalstar）养生壶煎药壶1.8L玻璃电水壶304不锈钢发热盘YSH18Q",
+            "saleState": 0,
+            "skuId": 1178224,
+            "noReasonToReturn": 4,
+            "thwa": 12
+          }
+        ]
+      }
+    }
+  }
+]

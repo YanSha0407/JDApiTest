@@ -1,0 +1,199 @@
+[
+  {
+    "description": "获取一级地址",
+    "request": {
+      "uri": "/api/area/getProvince",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": "true",
+        "resultMessage": "获取一级地址成功",
+        "resultCode": "0000",
+        "result": {
+          "北京": 1,
+          "新疆": 31,
+          "重庆": 4,
+          "广东": 19,
+          "天津": 3,
+          "浙江": 15,
+          "港澳": 52993,
+          "广西": 20,
+          "内蒙古": 11,
+          "宁夏": 30,
+          "江西": 21,
+          "台湾": 32,
+          "安徽": 14,
+          "贵州": 24,
+          "陕西": 27,
+          "辽宁": 8,
+          "山西": 6,
+          "青海": 29,
+          "四川": 22,
+          "江苏": 12,
+          "河北": 5,
+          "西藏": 26,
+          "钓鱼岛": 84,
+          "福建": 16,
+          "吉林": 9,
+          "上海": 2,
+          "湖北": 17,
+          "海南": 23,
+          "云南": 25,
+          "甘肃": 28,
+          "湖南": 18,
+          "山东": 13,
+          "河南": 7,
+          "黑龙江": 10
+        }
+      }
+    }
+  },
+  {
+    "description": "获取二级地址",
+    "request": {
+      "uri": "/api/area/getCity",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "provinceID": "13"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "淄博市": 1016,
+          "滨州市": 1090,
+          "济南市": 1000,
+          "烟台市": 1042,
+          "泰安市": 1112,
+          "临沂市": 1072,
+          "聊城市": 1081,
+          "青岛市": 1007,
+          "潍坊市": 1032,
+          "枣庄市": 1022,
+          "德州市": 1060,
+          "莱芜市": 1058,
+          "东营市": 1025,
+          "威海市": 1053,
+          "济宁市": 2900,
+          "日照市": 1108,
+          "菏泽市": 1099
+        }
+      }
+    }
+  },
+  {
+    "description": "获取三级地址",
+    "request": {
+      "uri": "/api/area/getCounty",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "cityID": "1016"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "泰山区": 46666,
+          "新泰市": 46668,
+          "宁阳县": 3535,
+          "东平县": 3132,
+          "肥城市": 46667,
+          "岱岳区": 46665
+        }
+      }
+    }
+  },
+  {
+    "description": "获取四级地址",
+    "request": {
+      "uri": "/api/area/getTown",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "json": {
+        "countyID": "46666"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "石莱镇": 46748,
+          "谷里镇": 46756,
+          "禹村镇": 46747,
+          "青云街道": 57809,
+          "果都镇": 46746,
+          "放城镇": 46749,
+          "翟镇": 46757,
+          "羊流镇": 46745,
+          "汶南镇": 46751,
+          "城区": 51375,
+          "天宝镇": 46753,
+          "东都镇": 46742,
+          "刘杜镇": 46750,
+          "岳家庄乡": 46758,
+          "龙廷镇": 46752,
+          "新汶街道": 57808,
+          "宫里镇": 46755,
+          "楼德镇": 46754,
+          "西张庄镇": 46741,
+          "小协镇": 46743,
+          "泉沟镇": 46744
+        }
+      }
+    }
+  },
+  {
+    "description": "验证地址有效性",
+    "request": {
+      "uri": "/api/area/checkArea",
+      "method": "post",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "forms": {
+        "provinceId": "13",
+        "cityId": "13",
+        "countyID": "13",
+        "townId": "13"
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "success": true,
+        "resultMessage": "",
+        "resultCode": "0000",
+        "result": {
+          "success": true,
+          "resultCode": 1,
+          "addressId": 0,
+          "message": null
+        }
+      }
+    }
+  }
+]
